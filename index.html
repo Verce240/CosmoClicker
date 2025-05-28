@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceClicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <div class="video-background">
+        <video autoplay muted loop>
+            <source src="immage/Video-CosmoSfondo2.mp4" type="video/mp4">
+            
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="game-container">
+        <!-- Header -->
+        <h1>SPACE CLICKER</h1>
+        
+        <!-- Risorse -->
+        <div class="resources">
+            <div class="resource">
+                <h2>Energia: <span id="energy">0</span></h2>
+                <p>Per secondo: <span id="energy-per-second">0</span></p>
+            </div>
+        </div
+        
+        <!-- Area cliccabile -->
+        <div class="click-area">
+            <div id="planet" class="clickable">
+                <div class="glow"></div>
+            </div>
+            <p>+<span id="click-value">1</span> energia per click</p>
+        </div>
+        
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button active" data-tab="producers">Produttori</button>
+            <button class="tab-button" data-tab="upgrades">Potenziamenti</button>
+        </div>
+        
+        <!-- Contenuto tabs -->
+        <div class="tab-content">
+            <!-- Produttori -->
+            <div id="producers" class="tab-pane active">
+                <h2>Produttori</h2>
+                <div class="shop-items">
+                    <!-- Satellite -->
+                    <div class="shop-item">
+                        <h3>Satellite</h3>
+                        <p>Produce 1 energia/sec</p>
+                        <p>Posseduti: <span id="satellite-count">0</span></p>
+                        <p>Costo: <span id="satellite-cost">10</span> energia</p>
+                        <button id="buy-satellite">Acquista</button>
+                    </div>
+                    
+                    <!-- Stazione Spaziale -->
+                    <div class="shop-item">
+                        <h3>Stazione Spaziale</h3>
+                        <p>Produce 5 energia/sec</p>
+                        <p>Posseduti: <span id="station-count">0</span></p>
+                        <p>Costo: <span id="station-cost">100</span> energia</p>
+                        <button id="buy-station">Acquista</button>
+                    </div>
+                    
+                    <!-- Colonia -->
+                    <div class="shop-item">
+                        <h3>Colonia</h3>
+                        <p>Produce 20 energia/sec</p>
+                        <p>Posseduti: <span id="colony-count">0</span></p>
+                        <p>Costo: <span id="colony-cost">1000</span> energia</p>
+                        <button id="buy-colony">Acquista</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Potenziamenti -->
+            <div id="upgrades" class="tab-pane">
+                <h2>Potenziamenti</h2>
+                <div class="shop-items">
+                    <!-- Potenziamento Click -->
+                    <div class="shop-item" id="click-upgrade">
+                        <h3>Guanti Spaziali</h3>
+                        <p>Raddoppia l'energia per click</p>
+                        <p>Costo: <span id="click-upgrade-cost">50</span> energia</p>
+                        <button id="buy-click-upgrade">Acquista</button>
+                    </div>
+                    
+                    <!-- Potenziamento Produzione -->
+                    <div class="shop-item" id="production-upgrade">
+                        <h3>Tecnologia Aliena</h3>
+                        <p>Aumenta la produzione del 50%</p>
+                        <p>Costo: <span id="production-upgrade-cost">200</span> energia</p>
+                        <button id="buy-production-upgrade">Acquista</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pulsante Reset -->
+        <div class="reset-section">
+            <p>Resetta il gioco per guadagnare stelle. Ogni stella aumenta la produzione del 10%.</p>
+            <p>Stelle attuali: <span id="stars">0</span></p>
+            <p>Stelle guadagnabili: <span id="stars-gain">0</span></p>
+            <button id="reset-button">Resetta Gioco</button>
+        </div>
+
+        <div class="reset-button-container">
+            <button id="reset-game-button">Resetta Partita</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
